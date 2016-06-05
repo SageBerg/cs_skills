@@ -1,0 +1,21 @@
+{
+  "name": "my_react_app",
+  "version": "1.0.0",
+  "description": "An app I'm building to learn React",
+  "main": "index.js",
+  "scripts": {
+    "babel-cli": "babel"
+  },
+  "author": "Sage Berg",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.9.0",
+    "babel-preset-react": "^6.5.0"
+  },
+  "dependencies": {
+    "express": "^4.13.4",
+    "http": "0.0.0",
+    "react": "^15.1.0",
+    "react-dom": "^15.1.0"
+  }
+}
