@@ -2,6 +2,38 @@ var React = require('react');
 var ReactDOM = require('react-dom');
 var Remarkable = require('remarkable')
 
+var SkillTable = React.createClass({
+  render: function() {
+    return (
+      <div clasName="jumbotron">
+        <div className="skill_table">
+          <table>
+            <thead>
+              <tr>
+                <th>Skill</th>
+                <th>Beginner</th>
+                <th>Intermediate</th>
+                <th>Advanced</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Databses</td>
+                <td>...</td>
+                <td>...</td>
+                <td>...</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    )
+  }
+});
+
+ReactDOM.render(<SkillTable />,
+                document.getElementById('skill_table_insertion_point'));
+
 var my_component = React.createClass({
   render: function() {
     return React.DOM.h1(null, "React Level-Up!");
@@ -20,6 +52,7 @@ var CommentBox = React.createClass({
         <h1>Comments</h1>
         <CommentList data={this.props.data} />
         <CommentForm />
+        <p>{this.props.other_data}</p>
       </div>
     );
   }
@@ -71,12 +104,14 @@ var Comment = React.createClass({
   }
 });
 
-var data = [
+var new_data = [
   {id: 1, author: "Pete Hunt", text: "This is one comment"},
   {id: 2, author: "Jordan Walke", text: "This is *another* comment"}
 ];
 
+var string = "hi";
+
 ReactDOM.render(
-  <CommentBox data={data} />,
+  <CommentBox other_data={string} data={new_data} />,
   document.getElementById('content')
 );
