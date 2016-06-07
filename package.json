@@ -10,9 +10,11 @@
   "license": "ISC",
   "devDependencies": {
     "babel-cli": "^6.9.0",
-    "babel-preset-react": "^6.5.0"
+    "babel-preset-react": "^6.5.0",
+    "remarkable": "^1.6.2"
   },
   "dependencies": {
+    "bootstrap": "^3.3.6",
     "express": "^4.13.4",
     "http": "0.0.0",
     "react": "^15.1.0",
