@@ -5,35 +5,42 @@ var Remarkable = require('remarkable')
 var SkillTable = React.createClass({
   render: function() {
     return (
-      <div clasName="jumbotron">
-        <div className="skill_table">
-          <table>
-            <thead>
-              <tr>
-                <th>Skill</th>
-                <th>Beginner</th>
-                <th>Intermediate</th>
-                <th>Advanced</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Databses</td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-              </tr>
-            </tbody>
-          </table>
+      <div id="enclosing_tag_required_by_react">
+        {/*<h1>{this.props.test_property}</h1>*/}
+        <div clasName="jumbotron">
+          <div className="container">
+            <div className="skill_table">
+              <table className="table">
+                <thead>
+                  <tr>
+                    <th>Skill</th>
+                    <th>Beginner</th>
+                    <th>Intermediate</th>
+                    <th>Advanced</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Databses</td>
+                    <td>...</td>
+                    <td>...</td>
+                    <td>...</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div> {/*end container*/}
+          </div>
         </div>
       </div>
+
     )
   }
 });
 
-ReactDOM.render(<SkillTable />,
+ReactDOM.render(<SkillTable test_property={"test property"}/>,
                 document.getElementById('skill_table_insertion_point'));
 
+/*
 var my_component = React.createClass({
   render: function() {
     return React.DOM.h1(null, "React Level-Up!");
@@ -44,6 +51,7 @@ var my_factory = React.createFactory(my_component);
 
 //ReactDOM.render(React.createElement(my_component),document.getElementById("headline"));
 ReactDOM.render(my_factory(), document.getElementById("headline"));
+*/
 
 var CommentBox = React.createClass({
   render: function() {
@@ -51,8 +59,8 @@ var CommentBox = React.createClass({
       <div className="commentBox">
         <h1>Comments</h1>
         <CommentList data={this.props.data} />
-        <CommentForm />
-        <p>{this.props.other_data}</p>
+        {/*<CommentForm />*/}
+        {/*<p>{this.props.other_data}</p>*/}
       </div>
     );
   }
@@ -76,6 +84,7 @@ var CommentList = React.createClass({
   }
 });
 
+/*
 var CommentForm = React.createClass({
   render: function() {
     return (
@@ -85,6 +94,7 @@ var CommentForm = React.createClass({
     );
   }
 });
+*/
 
 var Comment = React.createClass({
   rawMarkup: function() {

@@ -9,81 +9,89 @@ var SkillTable = React.createClass({
   render: function () {
     return React.createElement(
       'div',
-      { clasName: 'jumbotron' },
+      { id: 'enclosing_tag_required_by_react' },
       React.createElement(
         'div',
-        { className: 'skill_table' },
+        { clasName: 'jumbotron' },
         React.createElement(
-          'table',
-          null,
+          'div',
+          { className: 'container' },
           React.createElement(
-            'thead',
-            null,
+            'div',
+            { className: 'skill_table' },
             React.createElement(
-              'tr',
-              null,
+              'table',
+              { className: 'table' },
               React.createElement(
-                'th',
+                'thead',
                 null,
-                'Skill'
+                React.createElement(
+                  'tr',
+                  null,
+                  React.createElement(
+                    'th',
+                    null,
+                    'Skill'
+                  ),
+                  React.createElement(
+                    'th',
+                    null,
+                    'Beginner'
+                  ),
+                  React.createElement(
+                    'th',
+                    null,
+                    'Intermediate'
+                  ),
+                  React.createElement(
+                    'th',
+                    null,
+                    'Advanced'
+                  )
+                )
               ),
               React.createElement(
-                'th',
+                'tbody',
                 null,
-                'Beginner'
-              ),
-              React.createElement(
-                'th',
-                null,
-                'Intermediate'
-              ),
-              React.createElement(
-                'th',
-                null,
-                'Advanced'
+                React.createElement(
+                  'tr',
+                  null,
+                  React.createElement(
+                    'td',
+                    null,
+                    'Databses'
+                  ),
+                  React.createElement(
+                    'td',
+                    null,
+                    '...'
+                  ),
+                  React.createElement(
+                    'td',
+                    null,
+                    '...'
+                  ),
+                  React.createElement(
+                    'td',
+                    null,
+                    '...'
+                  )
+                )
               )
             )
           ),
-          React.createElement(
-            'tbody',
-            null,
-            React.createElement(
-              'tr',
-              null,
-              React.createElement(
-                'td',
-                null,
-                'Databses'
-              ),
-              React.createElement(
-                'td',
-                null,
-                '...'
-              ),
-              React.createElement(
-                'td',
-                null,
-                '...'
-              ),
-              React.createElement(
-                'td',
-                null,
-                '...'
-              )
-            )
-          )
+          ' '
         )
       )
     );
   }
 });
 
-ReactDOM.render(React.createElement(SkillTable, null), document.getElementById('skill_table_insertion_point'));
+ReactDOM.render(React.createElement(SkillTable, { test_property: "test property" }), document.getElementById('skill_table_insertion_point'));
 
+/*
 var my_component = React.createClass({
-  displayName: 'my_component',
-
-  render: function () {
+  render: function() {
     return React.DOM.h1(null, "React Level-Up!");
   }
 });
@@ -92,6 +100,7 @@ var my_factory = React.createFactory(my_component);
 
 //ReactDOM.render(React.createElement(my_component),document.getElementById("headline"));
 ReactDOM.render(my_factory(), document.getElementById("headline"));
+*/
 
 var CommentBox = React.createClass({
   displayName: 'CommentBox',
@@ -105,13 +114,7 @@ var CommentBox = React.createClass({
         null,
         'Comments'
       ),
-      React.createElement(CommentList, { data: this.props.data }),
-      React.createElement(CommentForm, null),
-      React.createElement(
-        'p',
-        null,
-        this.props.other_data
-      )
+      React.createElement(CommentList, { data: this.props.data })
     );
   }
 });
@@ -136,17 +139,17 @@ var CommentList = React.createClass({
   }
 });
 
+/*
 var CommentForm = React.createClass({
-  displayName: 'CommentForm',
-
-  render: function () {
-    return React.createElement(
-      'div',
-      { className: 'commentForm' },
-      'Hello, world! I am a CommentForm.'
+  render: function() {
+    return (
+      <div className="commentForm">
+        Hello, world! I am a CommentForm.
+      </div>
     );
   }
 });
+*/
 
 var Comment = React.createClass({
   displayName: 'Comment',
