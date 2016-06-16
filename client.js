@@ -1,12 +1,23 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
-var Remarkable = require('remarkable')
+var Remarkable = require('remarkable');
+var functions = require('./functions');
+
+var SkillLevel = React.createClass({
+  render: function() {
+    return (
+      <span>X</span>
+    )
+  }
+});
+
+ReactDOM.render(<SkillLevel />,
+  document.getElementById('skill_level'));
 
 var SkillTable = React.createClass({
   render: function() {
     return (
       <div id="enclosing_tag_required_by_react">
-        <h1>{this.props.test_property}</h1>
         <div clasName="jumbotron">
           <div className="container">
             <div className="skill_table">
@@ -38,7 +49,7 @@ var SkillTable = React.createClass({
 });
 
 ReactDOM.render(<SkillTable test_property={"test property"}/>,
-                document.getElementById('skill_table_insertion_point'));
+  document.getElementById('skill_table_insertion_point'));
 
 /*
 var my_component = React.createClass({
