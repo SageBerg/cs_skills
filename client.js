@@ -6,7 +6,7 @@ var SkillTable = React.createClass({
   render: function() {
     return (
       <div id="enclosing_tag_required_by_react">
-        {/*<h1>{this.props.test_property}</h1>*}
+        <h1>{this.props.test_property}</h1>
         <div clasName="jumbotron">
           <div className="container">
             <div className="skill_table">
