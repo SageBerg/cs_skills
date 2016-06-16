@@ -1,3 +1,17 @@
+.stick {
+  position: fixed;
+}
+
+#skill_level_calculation {
+  background-color: #111;
+  color: #eee;
+  height: 100px;
+  font-size: 300%;
+  width: 100%;
+}
+
 #skill_table_insertion_point {
-  background-color: #dfd;
+  background-color: #eee;
+  color: #444;
+  height: 400px;
 }
